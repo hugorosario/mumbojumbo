@@ -1,6 +1,7 @@
 # Mumbo jumbo
 
 A small tool to obfuscate strings in your Go code.
+
 This is a fork from [mumbojumbo](https://github.com/jeromer/mumbojumbo) to add some more functionality and customization of the function names.
 
 ## Description
