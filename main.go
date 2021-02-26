@@ -18,9 +18,9 @@ const (
 
 var (
 	s  = flag.String("s", "", "string to obfuscate")
-	p  = flag.String("p", "", "pkg name for the generated code")
-	op = flag.String("op", "", "operation name for the generated code")
-	f  = flag.String("f", "", "getter function name for the generated code")
+	p  = flag.String("p", "main", "pkg name for the generated code")
+	op = flag.String("op", "eax()", "operation name for the generated code")
+	f  = flag.String("f", "Get()", "getter function name for the generated code")
 )
 
 var (
@@ -52,14 +52,6 @@ func main() {
 
 	if *p == "" {
 		quit("no pkg provided")
-	}
-
-	if *op == "" {
-		*op = "mov()"
-	}
-
-	if *f == "" {
-		*f = "Get"
 	}
 
 	if !strings.HasSuffix(*op, "()") {
